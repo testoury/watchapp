@@ -1,0 +1,150 @@
+@import url('https://fonts.cdnfonts.com/css/cabolafe');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.34); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 30px;
+}
+
+.leftside {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.leftside a {
+    color: rgb(255, 255, 255); /* Adjust link color */
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    position: relative; /* Required for positioning the ::after pseudo-element */
+}
+
+.leftside a::after {
+    content: ''; /* Required for the ::after pseudo-element */
+    position: absolute;
+    top: 0; /* Position the line at the top of the anchor */
+    left: calc(100% + 12px); /* Position the line to the right of the anchor */
+    width: 0.5px; /* Adjust the width of the line */
+    height: 100%; /* Adjust the height of the line to match the height of the anchor */
+    background-color: white; /* Set the color of the line */
+}
+
+.leftside a:hover {
+    text-decoration: underline; /* Optional: underline links on hover */
+}
+
+.logo {
+    font-size: 32px;
+    margin-left: 8%;
+    background: rgba(255,255,255,0);
+    border-radius: 10px 10px 10px 10px;
+outline: 1px solid rgb(0, 0, 0); /* Add a black outline */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px; /* Add padding inside the outline */
+    margin-bottom: -15px; /* Apply negative margin to extend the border beyond the text */
+    margin-top: -15px;
+    font-family: 'Cabolafe', sans-serif;
+    color: black;
+}
+
+.srch {
+    position: relative; /* Make the container a positioning context */
+    height: 30px;
+    padding: 20px 20px 20px 60px; /* Adjust padding to accommodate the icon */
+    font-size: 16px;
+    border: 1px solid #000000aa;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #cccccc00;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    margin-left: 20%;
+}
+
+.search-button {
+    position: absolute; /* Position the icon absolutely */
+    top: 51%; /* Align the icon vertically */
+    right: 31%; /* Adjust the distance from the right edge */
+    transform: translateY(-50%); /* Center the icon vertically */
+    z-index: 1; /* Ensure the icon is above the input field */
+    cursor: pointer;
+    background-color: #00000000;
+    border: none;
+}
+
+.search-button i {
+    font-size: 15px;
+    color: #000000; /* Adjust icon color */
+}
+.sign1 {
+    width: 75px;
+    font-size: 14px;
+    align-items: center;
+    border: 0px solid #000000aa;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px; /* Adjust border radius as needed */
+    display: inline;
+}
+.sign2 {
+    font-size: 14px;
+    color: white;
+    width: 100px; 
+    border: 0px solid #fbfbfb;   
+    background-color: #000000;
+        padding: 10px 20px;  /* Adjust padding as needed */
+        border-radius: 20px; /* Adjust border radius as needed */
+        display: inline;
+}
+.imgcont {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative; /* Ensure relative positioning for absolute positioning of pseudo-element */
+}
+
+.imgcont::after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the pseudo-element */
+    bottom: 0; /* Align the pseudo-element to the bottom of the container */
+    left: 0; /* Align the pseudo-element to the left of the container */
+    width: 100%; /* Ensure the pseudo-element fills the container horizontally */
+    height: 50%; /* Set the height of the shadow */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); /* Apply the linear gradient */
+    pointer-events: none; /* Ensure pseudo-element doesn't capture mouse events */
+    z-index: -1; /* Ensure the pseudo-element appears below the image */
+}
+
+.imgcont img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transform: translateY(-26%);
+    position: relative; /* Ensure the image remains in the stacking context */
+    z-index: 1; /* Ensure the image appears above the pseudo-element */
+}
+
+
